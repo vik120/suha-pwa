@@ -1,3 +1,4 @@
+import { AuthComponent } from './auth/auth.component';
 import { ForgetPasswordComponent } from './forget-password/forget-password.component';
 import { RegisterComponent } from './register/register.component';
 import { LoginComponent } from './login/login.component';
@@ -6,16 +7,22 @@ import { RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
   {
-    path: 'login',
-    component: LoginComponent
-  },
-  {
-    path: 'register',
-    component: RegisterComponent
-  },
-  {
-    path: 'forget-password',
-    component: ForgetPasswordComponent
+    path: '',
+    component: AuthComponent,
+    children: [
+      {
+        path: '',
+        component: LoginComponent
+      },
+      {
+        path: 'register',
+        component: RegisterComponent
+      },
+      {
+        path: 'forget-password',
+        component: ForgetPasswordComponent
+      }
+    ]
   }
 ];
 

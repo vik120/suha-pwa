@@ -1,0 +1,22 @@
+<div class="card flash-sale-card" *ngIf="data">
+  <div class="card-body">
+    <a href="single-product.html"
+      ><img src="assets/img/product/1.png" alt="" /><span
+        class="product-title"
+        >{{data.name}}</span
+      >
+      <p class="sale-price">${{data.sellPrice}}<span class="real-price">${{data.realPrice}}</span></p>
+      <span class="progress-title">{{((data.realPrice - data.sellPrice) / data.realPrice)*100}}% Sold Out</span>
+      <!-- Progress Bar-->
+      <div class="progress">
+        <div
+          class="progress-bar"
+          role="progressbar"
+          [style.width]="((data.realPrice - data.sellPrice) / data.realPrice)*100 +'%'"
+          aria-valuenow="33"
+          aria-valuemin="0"
+          aria-valuemax="100"
+        ></div></div
+    ></a>
+  </div>
+</div>
