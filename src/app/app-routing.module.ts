@@ -9,15 +9,16 @@ const routes: Routes = [
   },
   {
     path: '',
-    redirectTo: 'home',
-    pathMatch: 'full'
+    redirectTo: 'productlist',
+    pathMatch: 'full',
   },
   {
     path: 'home',
     component: HomeComponent
   },
   { path: 'wishlist', loadChildren: () => import('./layout/wishlist/wishlist.module').then(m => m.WishlistModule) },
-  { path: 'product-detail', loadChildren: () => import('./layout/product-detail/product-detail.module').then(m => m.ProductDetailModule) }
+  { path: 'product-detail', loadChildren: () => import('./layout/product-detail/product-detail.module').then(m => m.ProductDetailModule) },
+  { path: 'productlist', loadChildren: () => import('./layout/productlist/productlist.module').then(m => m.ProductlistModule) }
 ];
 
 @NgModule({

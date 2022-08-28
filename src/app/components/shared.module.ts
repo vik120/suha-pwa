@@ -8,6 +8,8 @@ import { FooterComponent } from './footer/footer.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
 import { LoaderComponent } from './loader/loader.component';
 import { CardComponent } from './card/card.component';
+import { listComponent } from './product-list/list.component';
+import { CardViewComponent } from './card-view/card-view.component';
 
 @NgModule({
   imports: [
@@ -20,7 +22,9 @@ import { CardComponent } from './card/card.component';
     FooterComponent,
     SidebarComponent,
     LoaderComponent,
-    CardComponent
+    CardComponent,
+    listComponent,
+    CardViewComponent
   ],
   exports : [
     HeaderComponent,
